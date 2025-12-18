@@ -1,0 +1,43 @@
+### GET request to courses
+GET http://localhost:3000/api/courses
+
+### POST new course
+POST http://localhost:3000/api/courses
+Content-Type: application/json
+
+{
+  "name": "Course 1",
+  "description": "Description 1",
+  "instructor": "Ahmed",
+  "price": 10,
+  "category": "Design",
+  "students_enrolled": 10
+}
+
+### POST new course 2
+POST http://localhost:3000/api/courses
+Content-Type: application/json
+
+{
+  "name": "Course 2",
+  "description": "Description 2",
+  "instructor": "Yousif",
+  "price": 10,
+  "category": "Web Development",
+  "students_enrolled": 10
+}
+
+
+### GET course by id
+GET http://localhost:3000/api/courses/69302a030e0e7ee7968bab6f
+
+### PATCH course by id
+PATCH http://localhost:3000/api/courses/69302a030e0e7ee7968bab6f
+Content-Type: application/json
+
+{
+  "students_enrolled": 50
+}
+
+### DELETE course by id
+DELETE http://localhost:3000/api/courses/69302a030e0e7ee7968bab6f

@@ -1,0 +1,82 @@
+### Create first post
+POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+  "title": "My first post",
+  "content": "This is the content of my first post."
+}
+
+### Create second post
+POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+  "title": "My second post",
+  "content": "This is the content of my second post."
+}
+
+### Get all posts
+GET http://localhost:3000/posts
+Content-Type: application/json
+
+### Get post by ID (first post)
+GET http://localhost:3000/posts/0
+Content-Type: application/json
+
+### Update existing post (first post)
+PUT http://localhost:3000/posts/0
+Content-Type: application/json
+
+{
+  "title": "Updated Title",
+  "content": "This is the updated content of the first post."
+}
+
+### Get all posts after update
+GET http://localhost:3000/posts
+Content-Type: application/json
+
+### Add a comment to the first post
+POST http://localhost:3000/posts/0/comments
+Content-Type: application/json
+
+{
+  "content": "This is a comment on the first post."
+}
+
+### Add another comment to the first post
+POST http://localhost:3000/posts/0/comments
+Content-Type: application/json
+
+{
+  "content": "This is another comment on the first post."
+}
+
+### Get comments for the first post
+GET http://localhost:3000/posts/0/comments/
+Content-Type: application/json
+
+### Add a comment to the second post
+POST http://localhost:3000/posts/1/comments
+Content-Type: application/json
+
+{
+  "content": "Comment for the second post."
+}
+
+### Get comments for the second post
+GET http://localhost:3000/posts/1/comments/
+Content-Type: application/json
+
+### Delete the first post
+DELETE http://localhost:3000/posts/0
+Content-Type: application/json
+
+### Try to get the deleted post (should return 404)
+GET http://localhost:3000/posts/0
+Content-Type: application/json
+
+### Confirm remaining posts
+GET http://localhost:3000/posts
+Content-Type: application/json
